@@ -3,7 +3,19 @@
     <h1>HenryGBCDev</h1>
 
     <app-card>
-      <p>lorem</p>
+      <app-card-header> Mis Posts </app-card-header>
+      <app-card-body>
+        <ng-container *ngFor="let item of posts">
+          <app-item-post [value]="item"></app-item-post>
+        </ng-container>
+      </app-card-body>
+    </app-card>
+
+    <app-card>
+      <app-card-header> Contactanme </app-card-header>
+      <app-card-body>
+        <app-contact-form></app-contact-form>
+      </app-card-body>
     </app-card>
   </div>
 </main>
